@@ -17,7 +17,7 @@ fn python_find() {
         ----- stdout -----
 
         ----- stderr -----
-        error: No interpreter found in system path or `py` launcher
+        error: No interpreter found in managed installations, system path, or `py` launcher
         "###);
     } else {
         uv_snapshot!(context.filters(), context.python_find().env("UV_TEST_PYTHON_PATH", ""), @r###"
@@ -113,7 +113,7 @@ fn python_find() {
         ----- stdout -----
 
         ----- stderr -----
-        error: No interpreter found for PyPy in system path or `py` launcher
+        error: No interpreter found for PyPy in managed installations, system path, or `py` launcher
         "###);
     } else {
         uv_snapshot!(context.filters(), context.python_find().arg("pypy"), @r###"

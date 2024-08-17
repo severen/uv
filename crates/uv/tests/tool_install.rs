@@ -35,7 +35,6 @@ fn tool_install() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Prepared [N] packages in [TIME]
     Installed [N] packages in [TIME]
@@ -114,7 +113,6 @@ fn tool_install() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Prepared [N] packages in [TIME]
     Installed [N] packages in [TIME]
@@ -199,7 +197,6 @@ fn tool_install_suggest_other_packages_with_executable() {
     Did you mean `uv tool install fastapi-cli`?
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved 35 packages in [TIME]
     Prepared 35 packages in [TIME]
     Installed 35 packages in [TIME]
@@ -258,7 +255,6 @@ fn tool_install_version() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved 6 packages in [TIME]
     Prepared 6 packages in [TIME]
     Installed 6 packages in [TIME]
@@ -346,7 +342,6 @@ fn tool_install_editable() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved 1 package in [TIME]
     Prepared 1 package in [TIME]
     Installed 1 package in [TIME]
@@ -418,7 +413,6 @@ fn tool_install_editable() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Installed 1 executable: black
     "###);
 
@@ -451,7 +445,6 @@ fn tool_install_editable() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved 6 packages in [TIME]
     Prepared 6 packages in [TIME]
     Uninstalled 1 package in [TIME]
@@ -502,7 +495,6 @@ fn tool_install_remove_on_empty() -> Result<()> {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved 6 packages in [TIME]
     Prepared 6 packages in [TIME]
     Installed 6 packages in [TIME]
@@ -570,7 +562,6 @@ fn tool_install_remove_on_empty() -> Result<()> {
     No executables are provided by `black`
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved 1 package in [TIME]
     Prepared 1 package in [TIME]
     Uninstalled 6 packages in [TIME]
@@ -595,7 +586,6 @@ fn tool_install_remove_on_empty() -> Result<()> {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved 6 packages in [TIME]
     Installed 6 packages in [TIME]
      + black==24.3.0
@@ -648,7 +638,6 @@ fn tool_install_editable_from() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved 1 package in [TIME]
     Prepared 1 package in [TIME]
     Installed 1 package in [TIME]
@@ -730,7 +719,6 @@ fn tool_install_from() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved 6 packages in [TIME]
     Prepared 6 packages in [TIME]
     Installed 6 packages in [TIME]
@@ -756,7 +744,6 @@ fn tool_install_from() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     error: Package name (`flask`) provided with `--from` does not match install request (`black`)
     "###);
 
@@ -773,7 +760,6 @@ fn tool_install_from() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     error: Package requirement (`black==24.3.0`) provided with `--from` conflicts with install request (`black==24.2.0`)
     "###);
 }
@@ -798,7 +784,6 @@ fn tool_install_already_installed() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Prepared [N] packages in [TIME]
     Installed [N] packages in [TIME]
@@ -866,7 +851,6 @@ fn tool_install_already_installed() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     `black` is already installed
     "###);
 
@@ -905,7 +889,6 @@ fn tool_install_already_installed() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Prepared [N] packages in [TIME]
     Uninstalled [N] packages in [TIME]
@@ -939,7 +922,6 @@ fn tool_install_already_installed() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Prepared [N] packages in [TIME]
     Uninstalled [N] packages in [TIME]
@@ -963,7 +945,6 @@ fn tool_install_already_installed() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Prepared [N] packages in [TIME]
     Uninstalled [N] packages in [TIME]
@@ -997,7 +978,6 @@ fn tool_install_entry_point_exists() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Prepared [N] packages in [TIME]
     Installed [N] packages in [TIME]
@@ -1037,7 +1017,6 @@ fn tool_install_entry_point_exists() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Prepared [N] packages in [TIME]
     Installed [N] packages in [TIME]
@@ -1079,7 +1058,6 @@ fn tool_install_entry_point_exists() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Installed [N] packages in [TIME]
      + black==24.3.0
@@ -1103,7 +1081,6 @@ fn tool_install_entry_point_exists() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Installed [N] packages in [TIME]
      + black==24.3.0
@@ -1129,7 +1106,6 @@ fn tool_install_entry_point_exists() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Installed 2 executables: black, blackd
     "###);
 
@@ -1146,7 +1122,6 @@ fn tool_install_entry_point_exists() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     `black` is already installed
     "###);
 
@@ -1164,7 +1139,6 @@ fn tool_install_entry_point_exists() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Prepared [N] packages in [TIME]
     Uninstalled [N] packages in [TIME]
@@ -1277,7 +1251,6 @@ fn tool_install_home() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved 6 packages in [TIME]
     Prepared 6 packages in [TIME]
     Installed 6 packages in [TIME]
@@ -1315,7 +1288,6 @@ fn tool_install_xdg_data_home() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved 6 packages in [TIME]
     Prepared 6 packages in [TIME]
     Installed 6 packages in [TIME]
@@ -1352,7 +1324,6 @@ fn tool_install_xdg_bin_home() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved 6 packages in [TIME]
     Prepared 6 packages in [TIME]
     Installed 6 packages in [TIME]
@@ -1388,7 +1359,6 @@ fn tool_install_no_entrypoints() {
     No executables are provided by `iniconfig`
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved 1 package in [TIME]
     Prepared 1 package in [TIME]
     Installed 1 package in [TIME]
@@ -1414,7 +1384,6 @@ fn tool_install_unnamed_package() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved 6 packages in [TIME]
     Prepared 6 packages in [TIME]
     Installed 6 packages in [TIME]
@@ -1504,7 +1473,6 @@ fn tool_install_unnamed_conflict() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     error: Package name (`iniconfig`) provided with `--from` does not match install request (`black`)
     "###);
 }
@@ -1529,7 +1497,6 @@ fn tool_install_unnamed_from() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved 6 packages in [TIME]
     Prepared 6 packages in [TIME]
     Installed 6 packages in [TIME]
@@ -1618,7 +1585,6 @@ fn tool_install_unnamed_with() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved 7 packages in [TIME]
     Prepared 7 packages in [TIME]
     Installed 7 packages in [TIME]
@@ -1716,7 +1682,6 @@ fn tool_install_requirements_txt() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Prepared [N] packages in [TIME]
     Installed [N] packages in [TIME]
@@ -1766,7 +1731,6 @@ fn tool_install_requirements_txt() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Prepared [N] packages in [TIME]
     Uninstalled [N] packages in [TIME]
@@ -1826,7 +1790,6 @@ fn tool_install_requirements_txt_arguments() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     warning: Ignoring `--index-url` from requirements file: `https://test.pypi.org/simple`. Instead, use the `--index-url` command-line argument, or set `index-url` in a `uv.toml` or `pyproject.toml` file.
     Resolved 7 packages in [TIME]
     Prepared 7 packages in [TIME]
@@ -1884,7 +1847,6 @@ fn tool_install_requirements_txt_arguments() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Installed 2 executables: black, blackd
     "###);
 
@@ -1912,7 +1874,6 @@ fn tool_install_requirements_txt_arguments() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved 8 packages in [TIME]
     Prepared 8 packages in [TIME]
     Installed 8 packages in [TIME]
@@ -1948,7 +1909,6 @@ fn tool_install_upgrade() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Prepared [N] packages in [TIME]
     Installed [N] packages in [TIME]
@@ -1990,7 +1950,6 @@ fn tool_install_upgrade() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Installed 2 executables: black, blackd
     "###);
 
@@ -2024,7 +1983,6 @@ fn tool_install_upgrade() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Prepared [N] packages in [TIME]
     Installed [N] packages in [TIME]
@@ -2065,7 +2023,6 @@ fn tool_install_upgrade() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Prepared [N] packages in [TIME]
     Uninstalled [N] packages in [TIME]
@@ -2116,7 +2073,6 @@ fn tool_install_python_request() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Prepared [N] packages in [TIME]
     Installed [N] packages in [TIME]
@@ -2142,7 +2098,6 @@ fn tool_install_python_request() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     `black` is already installed
     "###);
 
@@ -2159,7 +2114,6 @@ fn tool_install_python_request() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Existing environment for `black` does not satisfy the requested Python interpreter
     Resolved [N] packages in [TIME]
     Prepared [N] packages in [TIME]
@@ -2194,7 +2148,6 @@ fn tool_install_preserve_environment() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Prepared [N] packages in [TIME]
     Installed [N] packages in [TIME]
@@ -2220,7 +2173,6 @@ fn tool_install_preserve_environment() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     error: Because black==24.1.1 depends on packaging>=22.0 and you require black==24.1.1, we can conclude that you require packaging>=22.0.
     And because you require packaging==0.0.1, we can conclude that your requirements are unsatisfiable.
     "###);
@@ -2236,7 +2188,6 @@ fn tool_install_preserve_environment() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     `black==24.1.1` is already installed
     "###);
 }
@@ -2262,7 +2213,6 @@ fn tool_install_warn_path() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Prepared [N] packages in [TIME]
     Installed [N] packages in [TIME]
@@ -2297,7 +2247,6 @@ fn tool_install_bad_receipt() -> Result<()> {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Prepared [N] packages in [TIME]
     Installed [N] packages in [TIME]
@@ -2332,7 +2281,6 @@ fn tool_install_bad_receipt() -> Result<()> {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     warning: Removed existing `black` with invalid receipt
     Resolved [N] packages in [TIME]
     Installed [N] packages in [TIME]
@@ -2369,7 +2317,6 @@ fn tool_install_malformed_dist_info() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Prepared [N] packages in [TIME]
     Installed [N] packages in [TIME]
@@ -2443,7 +2390,6 @@ fn tool_install_settings() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Prepared [N] packages in [TIME]
     Installed [N] packages in [TIME]
@@ -2513,7 +2459,6 @@ fn tool_install_settings() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     `flask>=3` is already installed
     "###);
 
@@ -2549,7 +2494,6 @@ fn tool_install_settings() {
     ----- stdout -----
 
     ----- stderr -----
-    warning: `uv tool install` is experimental and may change without warning
     Resolved [N] packages in [TIME]
     Prepared [N] packages in [TIME]
     Uninstalled [N] packages in [TIME]

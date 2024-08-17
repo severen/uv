@@ -444,7 +444,7 @@ fn create_venv_unknown_python_minor() {
         ----- stdout -----
 
         ----- stderr -----
-          × No interpreter found for Python 3.100 in system path or `py` launcher
+          × No interpreter found for Python 3.100 in managed installations, system path, or `py` launcher
         "###
         );
     } else {
@@ -454,7 +454,7 @@ fn create_venv_unknown_python_minor() {
         ----- stdout -----
 
         ----- stderr -----
-          × No interpreter found for Python 3.100 in system path
+          × No interpreter found for Python 3.100 in managed installations or system path
         "###
         );
     }
@@ -482,7 +482,7 @@ fn create_venv_unknown_python_patch() {
         ----- stdout -----
 
         ----- stderr -----
-          × No interpreter found for Python 3.12.100 in system path or `py` launcher
+          × No interpreter found for Python 3.12.100 in managed installations, system path, or `py` launcher
         "###
         );
     } else {
@@ -492,7 +492,7 @@ fn create_venv_unknown_python_patch() {
         ----- stdout -----
 
         ----- stderr -----
-          × No interpreter found for Python 3.12.100 in system path
+          × No interpreter found for Python 3.12.100 in managed installations or system path
         "###
         );
     }

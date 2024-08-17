@@ -17,7 +17,7 @@ use uv_cache::Cache;
 use uv_client::{BaseClientBuilder, Connectivity, FlatIndexClient, RegistryClientBuilder};
 use uv_configuration::{
     BuildOptions, Concurrency, ConfigSettings, IndexStrategy, KeyringProviderType, NoBinary,
-    NoBuild, PreviewMode, SetupPyStrategy, SourceStrategy,
+    NoBuild, SetupPyStrategy, SourceStrategy,
 };
 use uv_dispatch::BuildDispatch;
 use uv_fs::{Simplified, CWD};
@@ -28,7 +28,6 @@ use uv_python::{
 use uv_resolver::{ExcludeNewer, FlatIndex, RequiresPython};
 use uv_shell::Shell;
 use uv_types::{BuildContext, BuildIsolation, HashStrategy};
-use uv_warnings::warn_user_once;
 use uv_workspace::{DiscoveryOptions, VirtualProject, WorkspaceError};
 
 use crate::commands::pip::loggers::{DefaultInstallLogger, InstallLogger};
@@ -56,7 +55,6 @@ pub(crate) async fn venv(
     allow_existing: bool,
     exclude_newer: Option<ExcludeNewer>,
     native_tls: bool,
-    preview: PreviewMode,
     cache: &Cache,
     printer: Printer,
     relocatable: bool,
@@ -72,7 +70,6 @@ pub(crate) async fn venv(
         system_site_packages,
         connectivity,
         seed,
-        preview,
         python_preference,
         python_downloads,
         allow_existing,
@@ -124,7 +121,6 @@ async fn venv_impl(
     system_site_packages: bool,
     connectivity: Connectivity,
     seed: bool,
-    preview: PreviewMode,
     python_preference: PythonPreference,
     python_downloads: PythonDownloads,
     allow_existing: bool,
@@ -134,10 +130,6 @@ async fn venv_impl(
     printer: Printer,
     relocatable: bool,
 ) -> miette::Result<ExitStatus> {
-    if preview.is_disabled() && relocatable {
-        warn_user_once!("`--relocatable` is experimental and may change without warning");
-    }
-
     let client_builder = BaseClientBuilder::default()
         .connectivity(connectivity)
         .native_tls(native_tls);
@@ -148,7 +140,7 @@ async fn venv_impl(
     let mut interpreter_request = python_request.map(PythonRequest::parse);
 
     // (2) Request from `.python-version`
-    if preview.is_enabled() && interpreter_request.is_none() {
+    if interpreter_request.is_none() {
         interpreter_request =
             request_from_version_file(&std::env::current_dir().into_diagnostic()?)
                 .await
@@ -156,7 +148,7 @@ async fn venv_impl(
     }
 
     // (3) `Requires-Python` in `pyproject.toml`
-    if preview.is_enabled() && interpreter_request.is_none() {
+    if interpreter_request.is_none() {
         let project = match VirtualProject::discover(&CWD, &DiscoveryOptions::default()).await {
             Ok(project) => Some(project),
             Err(WorkspaceError::MissingPyprojectToml) => None,
@@ -301,7 +293,6 @@ async fn venv_impl(
             exclude_newer,
             sources,
             concurrency,
-            preview,
         );
 
         // Resolve the seed packages.
